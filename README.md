@@ -9,7 +9,7 @@ An autonomous, explainable compliance intelligence platform for BFSI wealth mana
 **Public Web Application:** [https://argus-frontend-833068408683.asia-south1.run.app/](https://argus-frontend-833068408683.asia-south1.run.app/)
 
 > [!NOTE]
-> The live deployment on Google Cloud Run is hosted for the Google Cloud AI Builder Cup 2026 evaluation period and may be decommissioned after judging concludes. An institutional sign-in is required to access compliance casework; credentials are not published publicly.
+> **Enterprise Cloud Architecture:** Powered by **Vertex AI** (`gemini-3.5-flash` & `gemini-2.5-flash`) · **Google Cloud Sensitive Data Protection (DLP)** · **Cloud Run** · **Cloud SQL for MySQL 8.0** · **Eventarc & Pub/Sub** · **Cloud Storage** · **OpenTelemetry, Cloud Trace & Cloud Logging** · **FastAPI** · **React 18 & Vite** · **WaveSurfer.js**.
 
 ---
 
