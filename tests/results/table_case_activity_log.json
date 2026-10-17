@@ -1,0 +1,274 @@
+[
+  {
+    "log_id": 1,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T06:27:26"
+  },
+  {
+    "log_id": 2,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Ethics, 2026.",
+    "timestamp": "2026-10-15T06:34:49"
+  },
+  {
+    "log_id": 3,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T06:35:38"
+  },
+  {
+    "log_id": 4,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-3",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: AMFI Code of Ethics, 2026 f.",
+    "timestamp": "2026-10-15T06:36:09"
+  },
+  {
+    "log_id": 5,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-4",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T06:36:38"
+  },
+  {
+    "log_id": 6,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-5",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T06:37:08"
+  },
+  {
+    "log_id": 7,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-6",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T06:37:34"
+  },
+  {
+    "log_id": 8,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-7",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T06:38:03"
+  },
+  {
+    "log_id": 9,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-8",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T06:38:25"
+  },
+  {
+    "log_id": 10,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "NOTE_ADDED",
+    "actor": "REV001",
+    "details": "Phase 2 automated verification note",
+    "timestamp": "2026-10-15T06:41:55"
+  },
+  {
+    "log_id": 11,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "ASSIGNED",
+    "actor": "REV001",
+    "details": "Assigned to Kiran Shetty (REV001) by REV001",
+    "timestamp": "2026-10-15T06:41:56"
+  },
+  {
+    "log_id": 12,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "STATUS_CHANGE",
+    "actor": "REV001",
+    "details": "Action: dismiss. Notes: Phase 2 test resolution rationale",
+    "timestamp": "2026-10-15T06:41:57"
+  },
+  {
+    "log_id": 13,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "NOTE_ADDED",
+    "actor": "REV001",
+    "details": "Phase 2 automated verification note",
+    "timestamp": "2026-10-15T06:42:52"
+  },
+  {
+    "log_id": 14,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "ASSIGNED",
+    "actor": "REV001",
+    "details": "Assigned to Kiran Shetty (REV001) by REV001",
+    "timestamp": "2026-10-15T06:42:54"
+  },
+  {
+    "log_id": 15,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "NOTE_ADDED",
+    "actor": "REV001",
+    "details": "Phase 2 automated verification note",
+    "timestamp": "2026-10-15T06:43:53"
+  },
+  {
+    "log_id": 16,
+    "case_id": "CASE-CALL_RM001_CUST001_20260310_1030-1",
+    "action": "ASSIGNED",
+    "actor": "REV001",
+    "details": "Assigned to Kiran Shetty (REV001) by REV001",
+    "timestamp": "2026-10-15T06:43:55"
+  },
+  {
+    "log_id": 17,
+    "case_id": "CASE-CALL_RM001_CUST004_20260405_1145-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.4.h.",
+    "timestamp": "2026-10-15T06:53:25"
+  },
+  {
+    "log_id": 18,
+    "case_id": "CASE-CALL_RM001_CUST004_20260405_1145-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T06:53:45"
+  },
+  {
+    "log_id": 19,
+    "case_id": "CASE-CALL_RM002_CUST002_20260318_0915-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T06:55:37"
+  },
+  {
+    "log_id": 20,
+    "case_id": "CASE-CALL_RM002_CUST002_20260318_0915-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T06:55:58"
+  },
+  {
+    "log_id": 21,
+    "case_id": "CASE-CALL_RM003_CUST003_20260212_1620-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T06:59:38"
+  },
+  {
+    "log_id": 22,
+    "case_id": "CASE-CALL_RM003_CUST003_20260212_1620-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T06:59:58"
+  },
+  {
+    "log_id": 23,
+    "case_id": "CASE-CALL_RM003_CUST003_20260630_1330-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T07:02:08"
+  },
+  {
+    "log_id": 24,
+    "case_id": "CASE-CALL_RM003_CUST003_20260630_1330-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T07:02:29"
+  },
+  {
+    "log_id": 25,
+    "case_id": "CASE-CALL_RM004_CUST002_20260701_0930-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T07:04:30"
+  },
+  {
+    "log_id": 26,
+    "case_id": "CASE-CALL_RM004_CUST002_20260701_0930-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T07:04:54"
+  },
+  {
+    "log_id": 27,
+    "case_id": "CASE-CALL_RM005_CUST001_20260815_1615-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.a.",
+    "timestamp": "2026-10-15T07:08:06"
+  },
+  {
+    "log_id": 28,
+    "case_id": "CASE-CALL_RM005_CUST005_20260319_1200-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: MEDIUM. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.2.c.",
+    "timestamp": "2026-10-15T07:10:17"
+  },
+  {
+    "log_id": 29,
+    "case_id": "CASE-CALL_RM005_CUST005_20260319_1200-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T07:10:37"
+  },
+  {
+    "log_id": 30,
+    "case_id": "CASE-CALL_RM001_CUST001_20260320_0900-1",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) I.b.",
+    "timestamp": "2026-10-15T08:08:50"
+  },
+  {
+    "log_id": 31,
+    "case_id": "CASE-CALL_RM001_CUST001_20260320_0900-2",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: Master Circular for Mutual Funds (March 20, 2026).",
+    "timestamp": "2026-10-15T08:09:17"
+  },
+  {
+    "log_id": 32,
+    "case_id": "CASE-CALL_RM001_CUST001_20260320_0900-3",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.4.l.",
+    "timestamp": "2026-10-15T08:09:28"
+  },
+  {
+    "log_id": 33,
+    "case_id": "CASE-CALL_RM001_CUST001_20260320_0900-4",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) II.4.h.",
+    "timestamp": "2026-10-15T08:09:39"
+  },
+  {
+    "log_id": 34,
+    "case_id": "CASE-CALL_RM001_CUST001_20260320_0900-5",
+    "action": "CREATED",
+    "actor": "SYSTEM",
+    "details": "Automated compliance finding confirmed by Investigation Agent. Severity: HIGH. Citation: AMFI Code of Conduct for Mutual Fund Distributors (April 2022) I.b.",
+    "timestamp": "2026-10-15T08:09:56"
+  }
+]

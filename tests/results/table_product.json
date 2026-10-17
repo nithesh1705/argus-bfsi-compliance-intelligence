@@ -1,0 +1,51 @@
+[
+  {
+    "product_id": "PROD001",
+    "product_name": "ARGUS Liquid Fund",
+    "risk_class": "Low",
+    "suitable_risk_profiles": "Conservative,Moderate,Aggressive",
+    "disclosure_requirements": "Standard scheme document + risk-o-meter disclosure required."
+  },
+  {
+    "product_id": "PROD002",
+    "product_name": "ARGUS Short Duration Debt Fund",
+    "risk_class": "Low",
+    "suitable_risk_profiles": "Conservative,Moderate,Aggressive",
+    "disclosure_requirements": "Standard scheme document + risk-o-meter disclosure required."
+  },
+  {
+    "product_id": "PROD003",
+    "product_name": "ARGUS Balanced Hybrid Fund",
+    "risk_class": "Medium",
+    "suitable_risk_profiles": "Moderate,Aggressive",
+    "disclosure_requirements": "Risk-o-meter + hybrid-allocation disclosure required."
+  },
+  {
+    "product_id": "PROD004",
+    "product_name": "ARGUS Large Cap Equity Fund",
+    "risk_class": "Medium",
+    "suitable_risk_profiles": "Moderate,Aggressive",
+    "disclosure_requirements": "Risk-o-meter + market-risk disclosure required."
+  },
+  {
+    "product_id": "PROD005",
+    "product_name": "ARGUS Small Cap Equity Fund",
+    "risk_class": "High",
+    "suitable_risk_profiles": "Aggressive",
+    "disclosure_requirements": "Risk-o-meter + high-volatility disclosure + no-guaranteed-return disclosure mandatory."
+  },
+  {
+    "product_id": "PROD006",
+    "product_name": "ARGUS Sectoral Thematic Fund",
+    "risk_class": "High",
+    "suitable_risk_profiles": "Aggressive",
+    "disclosure_requirements": "Risk-o-meter + concentration-risk disclosure + no-guaranteed-return disclosure mandatory."
+  },
+  {
+    "product_id": "PROD007",
+    "product_name": "ARGUS Multi Asset Allocation Fund",
+    "risk_class": "Medium",
+    "suitable_risk_profiles": "Moderate,Aggressive",
+    "disclosure_requirements": "Risk-o-meter + multi-asset-allocation disclosure required."
+  }
+]

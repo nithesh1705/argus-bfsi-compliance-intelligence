@@ -1,0 +1,16 @@
+{
+  "tests/phase2/test_t0_env.py": "7e3c97a0fd2cea3b937c542f88a87020459e97e97fb0d21218d4487b3063fe9f",
+  "tests/phase2/test_t10_security.py": "2878251d4cc5497d58c5d5e6df46a201491cd543431c4769a3208f59cf9d05be",
+  "tests/phase2/test_t11_frontend.py": "b95c716c8c63f32979d24458b96f6686a22fbe651aa1698459692a353dd3a09e",
+  "tests/phase2/test_t12_resilience.py": "bf301747d924c0e4131c5fdc0b79022f3e5eb6309ad07bd6c3859ec489bce849",
+  "tests/phase2/test_t1_storage.py": "da041a1b62e3cef5b2c72c8983625ebacb93aaacc41f5ae717124b89aa71bbba",
+  "tests/phase2/test_t2_regulations.py": "609d11aa82f5b96ec7aa2464cd23158b9eebc7a99af2072ed0e06f41afae94f1",
+  "tests/phase2/test_t3_ingestion.py": "fad4dd9208d270d4789e46cc3b0d51495d91a01e52fa40ee5d1f6849c9dcb3e0",
+  "tests/phase2/test_t4_detection.py": "7b3e268c133076dc0a32aee09b08b4a11ce2f31c8fb144c1ec3deaaade6f5218",
+  "tests/phase2/test_t5_investigation.py": "a6b1e4a4e7c92deee5908cdb63d04fbce5c1871742c87f6b4e14a63a1181b2dd",
+  "tests/phase2/test_t6_pipeline.py": "168f109cc3473b337e5e8367d034cc85b1f003abfebb023d0a7b451dc78ddd62",
+  "tests/phase2/test_t7_api.py": "353f0a6fa307b75b60471e25fce9ba000c9ef61809e6394c3ed17d2f5f6c323a",
+  "tests/phase2/test_t8_chat.py": "0b26b3041632eb06d95e4866ed75b42139254e7619f08770dadd07b83334dc68",
+  "tests/phase2/test_t9_observability.py": "33a35014eb5a043bf6b8768912c7e5dec4653cbab93249cf3d18e8a0b354d311",
+  "backend/benchmark/ground_truth.json": "807247da52fba38a40e818a957f91ff562c8be0b860bb3080d7daa155159502d"
+}

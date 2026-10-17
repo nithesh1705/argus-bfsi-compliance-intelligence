@@ -1,0 +1,420 @@
+{
+  "title": "ARGUS Compliance Surveillance Three-Way Benchmark",
+  "timestamp": "2026-10-15T08:30:00Z",
+  "provider_mode": "vertex_ai",
+  "mock_mode": false,
+  "models": {
+    "flash": "gemini-2.5-flash",
+    "transcribe": "gemini-2.5-flash"
+  },
+  "theoretical_grounding": {
+    "recall_bound": "Full-pipeline recall is fundamentally bounded by Detection recall. The Investigation Agent acts strictly as a forensic filter and never discovers candidates that Detection missed."
+  },
+  "comparative_metrics": {
+    "keyword_baseline": {
+      "name": "Keyword Rules Baseline",
+      "description": "Deterministic regex and keyword scanner (Phase 6 rule engine alone; any candidate = violation)",
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "gemini_detection_only": {
+      "name": "Gemini Detection Only",
+      "description": "Gemini Flash candidate detector without forensic investigation (any candidate = violation)",
+      "tp": 6,
+      "fp": 3,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "accuracy": 0.6667
+    },
+    "full_argus_pipeline": {
+      "name": "Full ARGUS Pipeline",
+      "description": "Autonomous multi-stage pipeline: Gemini STT -> DLP -> Detection -> File Search -> Investigation with 4 Hard Guardrails",
+      "tp": 6,
+      "fp": 1,
+      "fn": 0,
+      "tn": 2,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "f1": 0.9231,
+      "accuracy": 0.8889
+    }
+  },
+  "call_9_analysis": {
+    "call_id": "CALL_RM005_CUST005_20260319_1200",
+    "description": "Ambiguous suitability evaluation (Moderate risk profile, Low investment experience).",
+    "ground_truth_note": "A genuine judgment call; either CONFIRMED-LOW or DISMISSED is acceptable. Excluded from strict precision/recall.",
+    "keyword_baseline_outcome": {
+      "has_violation": true,
+      "candidate_count": 2,
+      "severity": "LOW",
+      "category": "AMBIGUOUS_SUITABILITY"
+    },
+    "gemini_detection_outcome": {
+      "has_violation": true,
+      "candidate_count": 2,
+      "severity": "MEDIUM",
+      "category": "SUITABILITY_MISMATCH"
+    },
+    "full_pipeline_outcome": {
+      "has_violation": true,
+      "finding_count": 2,
+      "severity": "HIGH",
+      "investigation_outcomes": [
+        "CONFIRMED",
+        "CONFIRMED"
+      ]
+    }
+  },
+  "stage_latency_diagnostics": {
+    "archive.move": {
+      "mean_ms": 2433.5,
+      "median_ms": 2387.5,
+      "min_ms": 2254,
+      "max_ms": 2970,
+      "sample_count": 10
+    },
+    "detection.run": {
+      "mean_ms": 29712.2,
+      "median_ms": 24037,
+      "min_ms": 16598,
+      "max_ms": 63116,
+      "sample_count": 11
+    },
+    "ingestion.transcribe_and_redact": {
+      "mean_ms": 64027.4,
+      "median_ms": 59147.5,
+      "min_ms": 51417,
+      "max_ms": 108208,
+      "sample_count": 12
+    },
+    "investigation.run": {
+      "mean_ms": 66290.7,
+      "median_ms": 44481.0,
+      "min_ms": 16576,
+      "max_ms": 288174,
+      "sample_count": 10
+    },
+    "end_to_end": {
+      "mean_ms": 158868,
+      "median_ms": 130366.0,
+      "min_ms": 90046,
+      "max_ms": 464384,
+      "sample_count": 12
+    }
+  },
+  "calls_breakdown": [
+    {
+      "call_id": "CALL_RM001_CUST001_20260310_1030",
+      "ground_truth": {
+        "severity": "HIGH",
+        "category": "SUITABILITY_MISMATCH",
+        "has_violation": true,
+        "note": "Conservative/Low-experience customer sold PROD005 (High-risk, Aggressive-only)."
+      },
+      "keyword_baseline": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "HIGH",
+        "category": "SUITABILITY_MISMATCH"
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 8,
+        "severity": "HIGH",
+        "category": "SUITABILITY_MISMATCH"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 8,
+        "severity": "HIGH",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "CONFIRMED",
+          "CONFIRMED",
+          "CONFIRMED",
+          "CONFIRMED",
+          "CONFIRMED",
+          "CONFIRMED",
+          "CONFIRMED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM001_CUST004_20260405_1145",
+      "ground_truth": {
+        "severity": "MEDIUM",
+        "category": "GUARANTEED_RETURN",
+        "has_violation": true,
+        "note": "Mild/implied return-assurance language, not an explicit numeric guarantee."
+      },
+      "keyword_baseline": {
+        "has_violation": true,
+        "candidate_count": 1,
+        "severity": "MEDIUM",
+        "category": "GUARANTEED_RETURN"
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "HIGH",
+        "category": "GUARANTEED_RETURN"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 2,
+        "severity": "HIGH",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "CONFIRMED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM002_CUST002_20260318_0915",
+      "ground_truth": {
+        "severity": "HIGH",
+        "category": "GUARANTEED_RETURN",
+        "has_violation": true,
+        "note": "Explicit, unambiguous guaranteed-return claim (15%)."
+      },
+      "keyword_baseline": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "HIGH",
+        "category": "GUARANTEED_RETURN"
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "HIGH",
+        "category": "GUARANTEED_RETURN"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 2,
+        "severity": "HIGH",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "CONFIRMED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM002_CUST005_20260422_1400",
+      "ground_truth": {
+        "severity": "CLEAN",
+        "category": null,
+        "has_violation": false,
+        "note": "Fully compliant call \u2014 proper suitability, disclosure, KYC handling."
+      },
+      "keyword_baseline": {
+        "has_violation": false,
+        "candidate_count": 0,
+        "severity": "CLEAN",
+        "category": null
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 1,
+        "severity": "MEDIUM",
+        "category": "MISSING_RISK_DISCLOSURE"
+      },
+      "full_pipeline": {
+        "has_violation": false,
+        "finding_count": 0,
+        "severity": "CLEAN",
+        "investigation_outcomes": [
+          "DISMISSED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM003_CUST003_20260212_1620",
+      "ground_truth": {
+        "severity": "HIGH",
+        "category": "MISSING_DISCLOSURE",
+        "has_violation": true,
+        "note": "Suitability is fine (Aggressive customer, High-risk product) \u2014 violation is skipping mandatory concentration-risk/risk-o-meter disclosure."
+      },
+      "keyword_baseline": {
+        "has_violation": true,
+        "candidate_count": 1,
+        "severity": "HIGH",
+        "category": "MISSING_DISCLOSURE"
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "HIGH",
+        "category": "MISSING_RISK_DISCLOSURE"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 2,
+        "severity": "HIGH",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "CONFIRMED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM003_CUST003_20260630_1330",
+      "ground_truth": {
+        "severity": "LOW",
+        "category": "AMBIGUOUS_RETURN_CLAIM",
+        "has_violation": true,
+        "note": "Deliberately soft/hedged language ('should perform well') \u2014 tests against over-flagging. A CONFIRMED-LOW outcome is expected; a HIGH-severity outcome here would indicate over-flagging."
+      },
+      "keyword_baseline": {
+        "has_violation": true,
+        "candidate_count": 3,
+        "severity": "LOW",
+        "category": "AMBIGUOUS_RETURN_CLAIM"
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "MEDIUM",
+        "category": "GUARANTEED_RETURN"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 2,
+        "severity": "HIGH",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "CONFIRMED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM004_CUST004_20260228_1050",
+      "ground_truth": {
+        "severity": "CLEAN",
+        "category": null,
+        "has_violation": false,
+        "note": "Fully compliant call \u2014 correct suitability match, full disclosure, no guarantees."
+      },
+      "keyword_baseline": {
+        "has_violation": false,
+        "candidate_count": 0,
+        "severity": "CLEAN",
+        "category": null
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 1,
+        "severity": "MEDIUM",
+        "category": "MISSING_RISK_DISCLOSURE"
+      },
+      "full_pipeline": {
+        "has_violation": false,
+        "finding_count": 0,
+        "severity": "CLEAN",
+        "investigation_outcomes": [
+          "DISMISSED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM004_CUST002_20260701_0930",
+      "ground_truth": {
+        "severity": "MEDIUM",
+        "category": "MISSING_DISCLOSURE",
+        "has_violation": true,
+        "note": "Suitability fine \u2014 partial/vague disclosure, not a total gap."
+      },
+      "keyword_baseline": {
+        "has_violation": true,
+        "candidate_count": 1,
+        "severity": "MEDIUM",
+        "category": "MISSING_DISCLOSURE"
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "MEDIUM",
+        "category": "MISLEADING_PERFORMANCE_CLAIM"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 2,
+        "severity": "HIGH",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "CONFIRMED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM005_CUST005_20260319_1200",
+      "ground_truth": {
+        "severity": "LOW",
+        "category": "AMBIGUOUS_SUITABILITY",
+        "has_violation": true,
+        "note": "Product technically matches risk_profile but Low investment experience isn't accounted for. This is a genuine judgment call \u2014 either a CONFIRMED-LOW finding or a DISMISSED_NOT_GENUINE outcome from Phase 7 is an ACCEPTABLE result; do not score a DISMISSED outcome here as a false negative when computing recall \u2014 flag it separately as 'ambiguous case, judgment-dependent' in the report rather than folding it into the strict precision/recall numbers."
+      },
+      "keyword_baseline": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "LOW",
+        "category": "AMBIGUOUS_SUITABILITY"
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "MEDIUM",
+        "category": "SUITABILITY_MISMATCH"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 2,
+        "severity": "HIGH",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "CONFIRMED"
+        ]
+      }
+    },
+    {
+      "call_id": "CALL_RM005_CUST001_20260815_1615",
+      "ground_truth": {
+        "severity": "CLEAN",
+        "category": null,
+        "has_violation": false,
+        "note": "Fully compliant \u2014 same customer as call #1, handled correctly by a different RM."
+      },
+      "keyword_baseline": {
+        "has_violation": false,
+        "candidate_count": 0,
+        "severity": "CLEAN",
+        "category": null
+      },
+      "detection_only": {
+        "has_violation": true,
+        "candidate_count": 2,
+        "severity": "MEDIUM",
+        "category": "MISLEADING_PERFORMANCE_CLAIM"
+      },
+      "full_pipeline": {
+        "has_violation": true,
+        "finding_count": 1,
+        "severity": "MEDIUM",
+        "investigation_outcomes": [
+          "CONFIRMED",
+          "DISMISSED"
+        ]
+      }
+    }
+  ]
+}

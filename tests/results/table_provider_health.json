@@ -1,0 +1,37 @@
+[
+  {
+    "dependency_name": "Cloud SQL",
+    "status": "HEALTHY",
+    "last_checked_at": "2026-10-15T05:59:29",
+    "latency_ms": 0,
+    "details": "Connected via PyMySQL/Cloud SQL Connector"
+  },
+  {
+    "dependency_name": "Cloud Storage",
+    "status": "HEALTHY",
+    "last_checked_at": "2026-10-15T05:59:29",
+    "latency_ms": 0,
+    "details": "Initialized with calls and regulations buckets"
+  },
+  {
+    "dependency_name": "Gemini File Search",
+    "status": "HEALTHY",
+    "last_checked_at": "2026-10-15T05:59:29",
+    "latency_ms": 0,
+    "details": "Regulatory corpus store configured"
+  },
+  {
+    "dependency_name": "Sensitive Data Protection",
+    "status": "HEALTHY",
+    "last_checked_at": "2026-10-15T05:59:29",
+    "latency_ms": 0,
+    "details": "DLP inspection template loaded"
+  },
+  {
+    "dependency_name": "Vertex AI",
+    "status": "HEALTHY",
+    "last_checked_at": "2026-10-15T05:59:29",
+    "latency_ms": 0,
+    "details": "gemini-3.5-flash & gemini-3.5-transcribe ready"
+  }
+]

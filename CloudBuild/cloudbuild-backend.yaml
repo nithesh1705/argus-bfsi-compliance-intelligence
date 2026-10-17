@@ -1,0 +1,37 @@
+steps:
+  # 1. Build Backend Image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', '$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-backend:$_TAG', '-f', 'backend/Dockerfile', '.']
+
+  # 2. Push Backend
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', '$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-backend:$_TAG']
+
+  # 3. Deploy Backend to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'argus-backend'
+      - '--image=$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-backend:$_TAG'
+      - '--region=$_REGION'
+      - '--platform=managed'
+      - '--service-account=argus-backend-sa@$PROJECT_ID.iam.gserviceaccount.com'
+      - '--add-cloudsql-instances=$PROJECT_ID:$_REGION:argus-mysql-primary'
+      - '--set-env-vars=ARGUS_PROVIDER_MODE=live,ARGUS_ENVIRONMENT=production,ARGUS_PROJECT_ID=$PROJECT_ID,ARGUS_REGION=$_REGION,ARGUS_INSTANCE_CONNECTION_NAME=$PROJECT_ID:$_REGION:argus-mysql-primary,GOOGLE_CLOUD_LOCATION=us-central1,ARGUS_GEMINI_FLASH_MODEL=gemini-3.5-flash,ARGUS_GEMINI_TRANSCRIBE_MODEL=gemini-3.5-flash,ARGUS_GEMINI_ROLE_MAPPING_MODEL=gemini-2.5-flash,ARGUS_DB_USER=argus_user,ARGUS_DB_IS_MOCK=false,SMTP_HOST=smtp.gmail.com,SMTP_PORT=587,SMTP_USE_TLS=true,SMTP_USER=$_SMTP_USER,SMTP_FROM_EMAIL=$_SMTP_FROM_EMAIL,SMTP_FROM_NAME=ARGUS Compliance Platform'
+      - '--set-secrets=ARGUS_DB_PASSWORD=argus-db-password:latest,SMTP_PASSWORD=argus-smtp-password:latest'
+      - '--timeout=900'
+      - '--memory=2Gi'
+      - '--cpu=2'
+      - '--min-instances=0'
+      - '--allow-unauthenticated'
+
+substitutions:
+  _REGION: 'asia-south1'
+  _TAG: 'latest'
+  _SMTP_USER: 'compliance-alerts@example.com'
+  _SMTP_FROM_EMAIL: 'compliance-alerts@example.com'
+
+images:
+  - '$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-backend:$_TAG'

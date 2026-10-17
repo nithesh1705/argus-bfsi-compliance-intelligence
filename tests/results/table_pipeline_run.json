@@ -1,0 +1,145 @@
+[
+  {
+    "run_id": "RUN-06674f7b4881",
+    "call_id": "CALL_RM004_CUST004_20260228_1050",
+    "trace_id": "trace-9334633f51684c21",
+    "status": "COMPLETED",
+    "source_object": "RM004_CUST004_20260228_1050.wav",
+    "start_time": "2026-10-15T07:04:57",
+    "end_time": "2026-10-15T07:06:27",
+    "total_duration_ms": 90046,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-0b7fb97827bf",
+    "call_id": "CALL_RM002_CUST002_20260318_0915",
+    "trace_id": "trace-824547a7325e40a0",
+    "status": "COMPLETED",
+    "source_object": "RM002_CUST002_20260318_0915.wav",
+    "start_time": "2026-10-15T06:53:49",
+    "end_time": "2026-10-15T06:56:01",
+    "total_duration_ms": 131839,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-39c7aa6ac746",
+    "call_id": "CALL_RM001_CUST004_20260405_1145",
+    "trace_id": "trace-d35a66babd434da7",
+    "status": "COMPLETED",
+    "source_object": "RM001_CUST004_20260405_1145.wav",
+    "start_time": "2026-10-15T06:51:30",
+    "end_time": "2026-10-15T06:53:48",
+    "total_duration_ms": 138175,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-6dcaebc5c53a",
+    "call_id": "CALL_RM001_CUST001_20260320_0900",
+    "trace_id": "trace-3f47222460fa4b48",
+    "status": "COMPLETED",
+    "source_object": "RM001_CUST001_20260320_0900.wav",
+    "start_time": "2026-10-15T08:07:00",
+    "end_time": "2026-10-15T08:09:58",
+    "total_duration_ms": 177962,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-6ea5c7c7bb8d",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "trace_id": "trace-58e8f7ec9ef54c11",
+    "status": "FAILED",
+    "source_object": "RM001_CUST001_20260310_1030.wav",
+    "start_time": "2026-10-15T06:21:27",
+    "end_time": "2026-10-15T06:23:22",
+    "total_duration_ms": 115573,
+    "error_details": "'rationale'"
+  },
+  {
+    "run_id": "RUN-85bd74bc8735",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "trace_id": "trace-a0fa1cf13ace4f40",
+    "status": "COMPLETED",
+    "source_object": "RM001_CUST001_20260310_1030.wav",
+    "start_time": "2026-10-15T06:30:44",
+    "end_time": "2026-10-15T06:38:29",
+    "total_duration_ms": 464384,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-9994b82d905d",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "trace_id": "trace-92a7bea358db47dd",
+    "status": "FAILED",
+    "source_object": "RM001_CUST001_20260310_1030.wav",
+    "start_time": "2026-10-15T06:24:39",
+    "end_time": "2026-10-15T06:27:43",
+    "total_duration_ms": 183514,
+    "error_details": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}"
+  },
+  {
+    "run_id": "RUN-ab1c9a8cd26c",
+    "call_id": "CALL_RM002_CUST005_20260422_1400",
+    "trace_id": "trace-58f8688d93a34870",
+    "status": "COMPLETED",
+    "source_object": "RM002_CUST005_20260422_1400.wav",
+    "start_time": "2026-10-15T06:56:02",
+    "end_time": "2026-10-15T06:57:51",
+    "total_duration_ms": 109636,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-b0f515f74649",
+    "call_id": "CALL_RM005_CUST005_20260319_1200",
+    "trace_id": "trace-925c88ee7f8a46b9",
+    "status": "COMPLETED",
+    "source_object": "RM005_CUST005_20260319_1200.wav",
+    "start_time": "2026-10-15T07:08:33",
+    "end_time": "2026-10-15T07:10:40",
+    "total_duration_ms": 126923,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-c57be7892a8a",
+    "call_id": "CALL_RM003_CUST003_20260212_1620",
+    "trace_id": "trace-315e4ad7df6f4a0d",
+    "status": "COMPLETED",
+    "source_object": "RM003_CUST003_20260212_1620.wav",
+    "start_time": "2026-10-15T06:57:52",
+    "end_time": "2026-10-15T07:00:01",
+    "total_duration_ms": 128893,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-d5a544385d09",
+    "call_id": "CALL_RM003_CUST003_20260630_1330",
+    "trace_id": "trace-82ba34f7168840ab",
+    "status": "COMPLETED",
+    "source_object": "RM003_CUST003_20260630_1330.wav",
+    "start_time": "2026-10-15T07:00:02",
+    "end_time": "2026-10-15T07:02:32",
+    "total_duration_ms": 150392,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-e0206631a4aa",
+    "call_id": "CALL_RM004_CUST002_20260701_0930",
+    "trace_id": "trace-ec0c03cc763c452a",
+    "status": "COMPLETED",
+    "source_object": "RM004_CUST002_20260701_0930.wav",
+    "start_time": "2026-10-15T07:02:33",
+    "end_time": "2026-10-15T07:04:57",
+    "total_duration_ms": 143342,
+    "error_details": null
+  },
+  {
+    "run_id": "RUN-feccc20a66b6",
+    "call_id": "CALL_RM005_CUST001_20260815_1615",
+    "trace_id": "trace-5be241c77f25470a",
+    "status": "COMPLETED",
+    "source_object": "RM005_CUST001_20260815_1615.wav",
+    "start_time": "2026-10-15T07:06:28",
+    "end_time": "2026-10-15T07:08:32",
+    "total_duration_ms": 123699,
+    "error_details": null
+  }
+]

@@ -1,0 +1,472 @@
+[
+  {
+    "id": 1,
+    "run_id": "RUN-6ea5c7c7bb8d",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T06:21:28",
+    "end_time": "2026-10-15T06:22:41",
+    "duration_ms": 73097,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 2,
+    "run_id": "RUN-9994b82d905d",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T06:24:40",
+    "end_time": "2026-10-15T06:25:44",
+    "duration_ms": 64376,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 3,
+    "run_id": "RUN-9994b82d905d",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T06:25:44",
+    "end_time": "2026-10-15T06:26:40",
+    "duration_ms": 55665,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 4,
+    "run_id": "RUN-85bd74bc8735",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T06:30:45",
+    "end_time": "2026-10-15T06:32:33",
+    "duration_ms": 108208,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 5,
+    "run_id": "RUN-85bd74bc8735",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T06:32:33",
+    "end_time": "2026-10-15T06:33:36",
+    "duration_ms": 63116,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 6,
+    "run_id": "RUN-85bd74bc8735",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T06:33:37",
+    "end_time": "2026-10-15T06:38:25",
+    "duration_ms": 288174,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 7,
+    "run_id": "RUN-85bd74bc8735",
+    "call_id": "CALL_RM001_CUST001_20260310_1030",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T06:38:25",
+    "end_time": "2026-10-15T06:38:28",
+    "duration_ms": 2970,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 8,
+    "run_id": "RUN-39c7aa6ac746",
+    "call_id": "CALL_RM001_CUST004_20260405_1145",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T06:51:31",
+    "end_time": "2026-10-15T06:52:35",
+    "duration_ms": 63992,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 9,
+    "run_id": "RUN-39c7aa6ac746",
+    "call_id": "CALL_RM001_CUST004_20260405_1145",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T06:52:35",
+    "end_time": "2026-10-15T06:53:09",
+    "duration_ms": 33838,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 10,
+    "run_id": "RUN-39c7aa6ac746",
+    "call_id": "CALL_RM001_CUST004_20260405_1145",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T06:53:09",
+    "end_time": "2026-10-15T06:53:45",
+    "duration_ms": 36037,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 11,
+    "run_id": "RUN-39c7aa6ac746",
+    "call_id": "CALL_RM001_CUST004_20260405_1145",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T06:53:45",
+    "end_time": "2026-10-15T06:53:48",
+    "duration_ms": 2421,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 12,
+    "run_id": "RUN-0b7fb97827bf",
+    "call_id": "CALL_RM002_CUST002_20260318_0915",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T06:53:50",
+    "end_time": "2026-10-15T06:54:47",
+    "duration_ms": 57342,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 13,
+    "run_id": "RUN-0b7fb97827bf",
+    "call_id": "CALL_RM002_CUST002_20260318_0915",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T06:54:47",
+    "end_time": "2026-10-15T06:55:12",
+    "duration_ms": 24529,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 14,
+    "run_id": "RUN-0b7fb97827bf",
+    "call_id": "CALL_RM002_CUST002_20260318_0915",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T06:55:12",
+    "end_time": "2026-10-15T06:55:58",
+    "duration_ms": 45772,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 15,
+    "run_id": "RUN-0b7fb97827bf",
+    "call_id": "CALL_RM002_CUST002_20260318_0915",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T06:55:58",
+    "end_time": "2026-10-15T06:56:01",
+    "duration_ms": 2363,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 16,
+    "run_id": "RUN-ab1c9a8cd26c",
+    "call_id": "CALL_RM002_CUST005_20260422_1400",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T06:56:02",
+    "end_time": "2026-10-15T06:57:03",
+    "duration_ms": 60953,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 17,
+    "run_id": "RUN-ab1c9a8cd26c",
+    "call_id": "CALL_RM002_CUST005_20260422_1400",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T06:57:04",
+    "end_time": "2026-10-15T06:57:20",
+    "duration_ms": 16598,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 18,
+    "run_id": "RUN-ab1c9a8cd26c",
+    "call_id": "CALL_RM002_CUST005_20260422_1400",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T06:57:20",
+    "end_time": "2026-10-15T06:57:48",
+    "duration_ms": 27853,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 19,
+    "run_id": "RUN-ab1c9a8cd26c",
+    "call_id": "CALL_RM002_CUST005_20260422_1400",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T06:57:49",
+    "end_time": "2026-10-15T06:57:51",
+    "duration_ms": 2407,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 20,
+    "run_id": "RUN-c57be7892a8a",
+    "call_id": "CALL_RM003_CUST003_20260212_1620",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T06:57:53",
+    "end_time": "2026-10-15T06:58:49",
+    "duration_ms": 55959,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 21,
+    "run_id": "RUN-c57be7892a8a",
+    "call_id": "CALL_RM003_CUST003_20260212_1620",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T06:58:49",
+    "end_time": "2026-10-15T06:59:07",
+    "duration_ms": 17786,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 22,
+    "run_id": "RUN-c57be7892a8a",
+    "call_id": "CALL_RM003_CUST003_20260212_1620",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T06:59:07",
+    "end_time": "2026-10-15T06:59:58",
+    "duration_ms": 50894,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 23,
+    "run_id": "RUN-c57be7892a8a",
+    "call_id": "CALL_RM003_CUST003_20260212_1620",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T06:59:58",
+    "end_time": "2026-10-15T07:00:01",
+    "duration_ms": 2415,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 24,
+    "run_id": "RUN-d5a544385d09",
+    "call_id": "CALL_RM003_CUST003_20260630_1330",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T07:00:03",
+    "end_time": "2026-10-15T07:00:59",
+    "duration_ms": 56780,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 25,
+    "run_id": "RUN-d5a544385d09",
+    "call_id": "CALL_RM003_CUST003_20260630_1330",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T07:01:00",
+    "end_time": "2026-10-15T07:01:28",
+    "duration_ms": 28221,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 26,
+    "run_id": "RUN-d5a544385d09",
+    "call_id": "CALL_RM003_CUST003_20260630_1330",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T07:01:28",
+    "end_time": "2026-10-15T07:02:29",
+    "duration_ms": 61229,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 27,
+    "run_id": "RUN-d5a544385d09",
+    "call_id": "CALL_RM003_CUST003_20260630_1330",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T07:02:30",
+    "end_time": "2026-10-15T07:02:32",
+    "duration_ms": 2368,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 28,
+    "run_id": "RUN-e0206631a4aa",
+    "call_id": "CALL_RM004_CUST002_20260701_0930",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T07:02:34",
+    "end_time": "2026-10-15T07:03:38",
+    "duration_ms": 64116,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 29,
+    "run_id": "RUN-e0206631a4aa",
+    "call_id": "CALL_RM004_CUST002_20260701_0930",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T07:03:38",
+    "end_time": "2026-10-15T07:04:02",
+    "duration_ms": 24037,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 30,
+    "run_id": "RUN-e0206631a4aa",
+    "call_id": "CALL_RM004_CUST002_20260701_0930",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T07:04:03",
+    "end_time": "2026-10-15T07:04:54",
+    "duration_ms": 51114,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 31,
+    "run_id": "RUN-e0206631a4aa",
+    "call_id": "CALL_RM004_CUST002_20260701_0930",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T07:04:54",
+    "end_time": "2026-10-15T07:04:56",
+    "duration_ms": 2256,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 32,
+    "run_id": "RUN-06674f7b4881",
+    "call_id": "CALL_RM004_CUST004_20260228_1050",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T07:04:58",
+    "end_time": "2026-10-15T07:05:49",
+    "duration_ms": 51417,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 33,
+    "run_id": "RUN-06674f7b4881",
+    "call_id": "CALL_RM004_CUST004_20260228_1050",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T07:05:50",
+    "end_time": "2026-10-15T07:06:08",
+    "duration_ms": 18092,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 34,
+    "run_id": "RUN-06674f7b4881",
+    "call_id": "CALL_RM004_CUST004_20260228_1050",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T07:06:08",
+    "end_time": "2026-10-15T07:06:25",
+    "duration_ms": 16576,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 35,
+    "run_id": "RUN-06674f7b4881",
+    "call_id": "CALL_RM004_CUST004_20260228_1050",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T07:06:25",
+    "end_time": "2026-10-15T07:06:27",
+    "duration_ms": 2254,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 36,
+    "run_id": "RUN-feccc20a66b6",
+    "call_id": "CALL_RM005_CUST001_20260815_1615",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T07:06:29",
+    "end_time": "2026-10-15T07:07:25",
+    "duration_ms": 56218,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 37,
+    "run_id": "RUN-feccc20a66b6",
+    "call_id": "CALL_RM005_CUST001_20260815_1615",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T07:07:25",
+    "end_time": "2026-10-15T07:07:47",
+    "duration_ms": 21164,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 38,
+    "run_id": "RUN-feccc20a66b6",
+    "call_id": "CALL_RM005_CUST001_20260815_1615",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T07:07:47",
+    "end_time": "2026-10-15T07:08:29",
+    "duration_ms": 42068,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 39,
+    "run_id": "RUN-feccc20a66b6",
+    "call_id": "CALL_RM005_CUST001_20260815_1615",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T07:08:29",
+    "end_time": "2026-10-15T07:08:32",
+    "duration_ms": 2556,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 40,
+    "run_id": "RUN-b0f515f74649",
+    "call_id": "CALL_RM005_CUST005_20260319_1200",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T07:08:34",
+    "end_time": "2026-10-15T07:09:29",
+    "duration_ms": 55871,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 41,
+    "run_id": "RUN-b0f515f74649",
+    "call_id": "CALL_RM005_CUST005_20260319_1200",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T07:09:30",
+    "end_time": "2026-10-15T07:09:54",
+    "duration_ms": 23788,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 42,
+    "run_id": "RUN-b0f515f74649",
+    "call_id": "CALL_RM005_CUST005_20260319_1200",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T07:09:54",
+    "end_time": "2026-10-15T07:10:37",
+    "duration_ms": 43190,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 43,
+    "run_id": "RUN-b0f515f74649",
+    "call_id": "CALL_RM005_CUST005_20260319_1200",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T07:10:37",
+    "end_time": "2026-10-15T07:10:40",
+    "duration_ms": 2325,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 44,
+    "run_id": "RUN-6dcaebc5c53a",
+    "call_id": "CALL_RM001_CUST001_20260320_0900",
+    "stage_name": "ingestion.transcribe_and_redact",
+    "start_time": "2026-10-15T08:07:00",
+    "end_time": "2026-10-15T08:08:06",
+    "duration_ms": 65994,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 45,
+    "run_id": "RUN-6dcaebc5c53a",
+    "call_id": "CALL_RM001_CUST001_20260320_0900",
+    "stage_name": "detection.run",
+    "start_time": "2026-10-15T08:08:06",
+    "end_time": "2026-10-15T08:08:35",
+    "duration_ms": 29327,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 46,
+    "run_id": "RUN-6dcaebc5c53a",
+    "call_id": "CALL_RM001_CUST001_20260320_0900",
+    "stage_name": "investigation.run",
+    "start_time": "2026-10-15T08:08:35",
+    "end_time": "2026-10-15T08:09:57",
+    "duration_ms": 82002,
+    "status": "COMPLETED"
+  },
+  {
+    "id": 47,
+    "run_id": "RUN-6dcaebc5c53a",
+    "call_id": "CALL_RM001_CUST001_20260320_0900",
+    "stage_name": "archive.move",
+    "start_time": "2026-10-15T08:09:57",
+    "end_time": "2026-10-15T08:09:58",
+    "duration_ms": 434,
+    "status": "COMPLETED"
+  }
+]

@@ -1,0 +1,33 @@
+steps:
+  # 1. Build Frontend Image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', '$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-frontend:$_TAG', '-f', 'frontend/Dockerfile', './frontend']
+
+  # 2. Push Frontend
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', '$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-frontend:$_TAG']
+
+  # 3. Deploy Frontend to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'argus-frontend'
+      - '--image=$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-frontend:$_TAG'
+      - '--region=$_REGION'
+      - '--platform=managed'
+      - '--memory=512Mi'
+      - '--service-account=argus-backend-sa@$PROJECT_ID.iam.gserviceaccount.com'
+      - '--set-env-vars=VITE_API_BASE_URL=$_BACKEND_URL'
+      - '--min-instances=0'
+      - '--allow-unauthenticated'
+
+substitutions:
+  _REGION: 'asia-south1'
+  _TAG: 'latest'
+  _BACKEND_URL: 'https://argus-backend-PROJECT_NUMBER.asia-south1.run.app'
+
+images:
+  - '$_REGION-docker.pkg.dev/$PROJECT_ID/argus-repo/argus-frontend:$_TAG'
+

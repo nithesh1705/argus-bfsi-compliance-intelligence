@@ -1,0 +1,42 @@
+[
+  {
+    "customer_id": "CUST001",
+    "full_name": "Meena Iyer",
+    "mobile_number": "9800010001",
+    "risk_profile": "Conservative",
+    "investment_experience": "Low",
+    "kyc_status": "VERIFIED"
+  },
+  {
+    "customer_id": "CUST002",
+    "full_name": "Rohan Kapoor",
+    "mobile_number": "9800010002",
+    "risk_profile": "Moderate",
+    "investment_experience": "Medium",
+    "kyc_status": "VERIFIED"
+  },
+  {
+    "customer_id": "CUST003",
+    "full_name": "Anjali Rao",
+    "mobile_number": "9800010003",
+    "risk_profile": "Aggressive",
+    "investment_experience": "High",
+    "kyc_status": "VERIFIED"
+  },
+  {
+    "customer_id": "CUST004",
+    "full_name": "Suresh Pillai",
+    "mobile_number": "9800010004",
+    "risk_profile": "Conservative",
+    "investment_experience": "Medium",
+    "kyc_status": "VERIFIED"
+  },
+  {
+    "customer_id": "CUST005",
+    "full_name": "Kavita Bhatt",
+    "mobile_number": "9800010005",
+    "risk_profile": "Moderate",
+    "investment_experience": "Low",
+    "kyc_status": "PENDING"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "rm_id": "RM001",
+    "full_name": "Arjun Mehta",
+    "branch": "Mumbai - Andheri",
+    "joined_date": "2021-03-15",
+    "active": 1
+  },
+  {
+    "rm_id": "RM002",
+    "full_name": "Priya Nair",
+    "branch": "Bengaluru - Whitefield",
+    "joined_date": "2019-07-01",
+    "active": 1
+  },
+  {
+    "rm_id": "RM003",
+    "full_name": "Vikram Sinha",
+    "branch": "Delhi - Connaught Place",
+    "joined_date": "2022-01-10",
+    "active": 1
+  },
+  {
+    "rm_id": "RM004",
+    "full_name": "Sneha Kulkarni",
+    "branch": "Pune - Kothrud",
+    "joined_date": "2020-11-20",
+    "active": 1
+  },
+  {
+    "rm_id": "RM005",
+    "full_name": "Rahul Desai",
+    "branch": "Mumbai - Andheri",
+    "joined_date": "2023-06-05",
+    "active": 1
+  }
+]

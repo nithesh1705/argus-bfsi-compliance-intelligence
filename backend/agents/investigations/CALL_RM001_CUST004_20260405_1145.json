@@ -1,0 +1,47 @@
+{
+  "call_id": "CALL_RM001_CUST004_20260405_1145",
+  "date_time": "2026-04-05T11:45:00Z",
+  "rm_id": "RM001",
+  "customer_id": "CUST004",
+  "total_candidates": 1,
+  "confirmed_count": 1,
+  "dismissed_count": 0,
+  "investigations": [
+    {
+      "candidate_id": "CAND_CALL_RM001_CUST004_20260405_1145_01",
+      "outcome": "CONFIRMED",
+      "finding": {
+        "finding_id": "FND-2026-D1A91A",
+        "call_id": "CALL_RM001_CUST004_20260405_1145",
+        "rm_id": "RM001",
+        "customer_id": "CUST004",
+        "category": "GUARANTEED_RETURN",
+        "severity": "HIGH",
+        "confidence": 0.95,
+        "status": "OPEN",
+        "timestamp_start": 13.0,
+        "timestamp_end": 21.0,
+        "transcript_evidence": "Absolutely sir, you can rest assured. There is no chance of you incurring a loss in this. The money will remain completely safe.",
+        "customer_risk_profile": "Conservative",
+        "product_risk_class": "N/A",
+        "regulation_chunk_id": "AMFI_MFD_COC_2022_II_4_g",
+        "regulation_citation_label": "AMFI Distributor Code \u00a7II.4.g, p.5",
+        "regulation_source_url": "https://www.amfiindia.com/uploads/Revised_Codeof_Conductfor_Mutual_Fund_Distributors_April2022_57d91fe1c4.pdf",
+        "regulation_clause_text": "g. MFDs shall (i) not provide any indicative portfolio or indicative yield or indicative return\nfor any particular scheme or transaction and (ii) abstain from indicating or assuring \nreturns for any particular scheme or transaction.",
+        "reasoning": "The RM explicitly provided return assurance by stating 'There is no chance of you incurring a loss in this' and 'The money will remain completely safe.' This constitutes a clear violation of AMFI regulations which prohibit MFDs from assuring returns or indicating guaranteed outcomes for mutual fund investments. The statements create false certainty about investment safety, which is fundamentally incompatible with the nature of mutual fund products that carry market risk.",
+        "recommended_action": "Immediate coaching on prohibited return assurance language and mandatory retraining on AMFI compliance requirements for investment communications.",
+        "provider_used": "bedrock",
+        "bm25_score": 38.3574,
+        "semantic_score": 0.0,
+        "created_at": "2026-09-19T05:01:04.523505Z",
+        "updated_at": "2026-09-19T05:01:04.523505Z"
+      },
+      "provider_used": "bedrock",
+      "reasoning": "The RM explicitly provided return assurance by stating 'There is no chance of you incurring a loss in this' and 'The money will remain completely safe.' This constitutes a clear violation of AMFI regulations which prohibit MFDs from assuring returns or indicating guaranteed outcomes for mutual fund investments. The statements create false certainty about investment safety, which is fundamentally incompatible with the nature of mutual fund products that carry market risk.",
+      "investigation_completed_at": "2026-09-19T05:00:58.766737+00:00",
+      "case_id": "CASE-2026-D1A91A"
+    }
+  ],
+  "investigation_completed_at": "2026-09-19T05:01:05.524868+00:00",
+  "generated_at": "2026-09-19T05:01:05.524868+00:00"
+}

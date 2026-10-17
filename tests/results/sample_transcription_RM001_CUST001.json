@@ -1,0 +1,128 @@
+[
+  {
+    "segment_id": 1,
+    "speaker_label": "Speaker 1",
+    "start_ms": 113,
+    "end_ms": 5303,
+    "text_original": "Good morning, Mrs. Iyer. This is Arjun from Vigin Wealth. Thank you for taking my call."
+  },
+  {
+    "segment_id": 2,
+    "speaker_label": "Speaker 2",
+    "start_ms": 5583,
+    "end_ms": 7803,
+    "text_original": "Good morning, Arjun. Yes, go ahead."
+  },
+  {
+    "segment_id": 3,
+    "speaker_label": "Speaker 1",
+    "start_ms": 8203,
+    "end_ms": 19683,
+    "text_original": "I wanted to talk to you about a fantastic opportunity. Our small cap equity fund has been one of our best performers this year. A lot of our clients have seen really strong growth in it."
+  },
+  {
+    "segment_id": 4,
+    "speaker_label": "Speaker 2",
+    "start_ms": 20113,
+    "end_ms": 27953,
+    "text_original": "Small cap, isn't that quite risky? I usually prefer safer options, you know that. I've always kept my money in fixed deposits and liquid funds."
+  },
+  {
+    "segment_id": 5,
+    "speaker_label": "Speaker 1",
+    "start_ms": 28383,
+    "end_ms": 37263,
+    "text_original": "I understand, but honestly, in this market, staying too safe means you're missing out. Small caps have given much higher returns than anything else this year."
+  },
+  {
+    "segment_id": 6,
+    "speaker_label": "Speaker 1",
+    "start_ms": 37623,
+    "end_ms": 40483,
+    "text_original": "I really think you should put at least two lakhs into this."
+  },
+  {
+    "segment_id": 7,
+    "speaker_label": "Speaker 2",
+    "start_ms": 40993,
+    "end_ms": 46523,
+    "text_original": "I don't know. I've never really invested in equity before."
+  },
+  {
+    "segment_id": 8,
+    "speaker_label": "Speaker 2",
+    "start_ms": 46973,
+    "end_ms": 49753,
+    "text_original": "I'm a bit nervous about market ups and downs."
+  },
+  {
+    "segment_id": 9,
+    "speaker_label": "Speaker 1",
+    "start_ms": 50133,
+    "end_ms": 54623,
+    "text_original": "Don't worry too much about that, Mrs. Iyer. Yes, there will be some fluctuation,"
+  },
+  {
+    "segment_id": 10,
+    "speaker_label": "Speaker 1",
+    "start_ms": 54623,
+    "end_ms": 56983,
+    "text_original": "but over time it evens out."
+  },
+  {
+    "segment_id": 11,
+    "speaker_label": "Speaker 1",
+    "start_ms": 57273,
+    "end_ms": 60593,
+    "text_original": "Given how well this fund has been doing, I wouldn't be too concerned."
+  },
+  {
+    "segment_id": 12,
+    "speaker_label": "Speaker 1",
+    "start_ms": 61003,
+    "end_ms": 63483,
+    "text_original": "I can go ahead and process this for you today."
+  },
+  {
+    "segment_id": 13,
+    "speaker_label": "Speaker 2",
+    "start_ms": 63803,
+    "end_ms": 67363,
+    "text_original": "If you think it's fine, I do trust your judgment, Arjun."
+  },
+  {
+    "segment_id": 14,
+    "speaker_label": "Speaker 1",
+    "start_ms": 67703,
+    "end_ms": 69343,
+    "text_original": "Absolutely. Trust me on this one."
+  },
+  {
+    "segment_id": 15,
+    "speaker_label": "Speaker 1",
+    "start_ms": 69653,
+    "end_ms": 74363,
+    "text_original": "I'll get the paperwork moving and we'll get you started with the small cap fund right away."
+  },
+  {
+    "segment_id": 16,
+    "speaker_label": "Speaker 2",
+    "start_ms": 74693,
+    "end_ms": 76543,
+    "text_original": "Okay, sounds good. Thank you."
+  },
+  {
+    "segment_id": 17,
+    "speaker_label": "Speaker 1",
+    "start_ms": 76873,
+    "end_ms": 78473,
+    "text_original": "Thank you, Mrs. Iyer."
+  },
+  {
+    "segment_id": 18,
+    "speaker_label": "Speaker 1",
+    "start_ms": 78473,
+    "end_ms": 79053,
+    "text_original": "Talk soon."
+  }
+]

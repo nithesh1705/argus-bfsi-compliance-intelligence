@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: argus-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty12345
+      MYSQL_DATABASE: argus
+      MYSQL_USER: argus_user
+      MYSQL_PASSWORD: argus_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./data/schemas/argus_mysql_ddl.sql:/docker-entrypoint-initdb.d/01_ddl.sql:ro
+      - ./data/schemas/argus_mysql_seed_data.sql:/docker-entrypoint-initdb.d/02_seed.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: argus-backend
+    environment:
+      PORT: 8000
+      ARGUS_PROVIDER_MODE: mock
+      ARGUS_DB_HOST: mysql
+      ARGUS_DB_PORT: 3306
+      ARGUS_DB_USER: argus_user
+      ARGUS_DB_PASSWORD: argus_password
+      ARGUS_DB_NAME: argus
+      ARGUS_DB_IS_MOCK: "true"
+      ARGUS_DLP_ENABLED: "true"
+      GEMINI_FLASH_MODEL: gemini-3.5-flash
+      GEMINI_TRANSCRIBE_MODEL: gemini-3.5-transcribe
+    ports:
+      - "8000:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: argus-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
