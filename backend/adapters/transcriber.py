@@ -37,6 +37,7 @@ class DiarizedSegment:
         start_ms: int,
         end_ms: int,
         text_original: str,
+        text_english: Optional[str] = None,
         words: Optional[List[WordTimestamp]] = None,
         language: str = "en"
     ):
@@ -45,6 +46,7 @@ class DiarizedSegment:
         self.start_ms = start_ms
         self.end_ms = end_ms
         self.text_original = text_original
+        self.text_english = text_english or text_original
         self.words = words or []
         self.language = language
 
@@ -55,6 +57,7 @@ class DiarizedSegment:
             "start_ms": self.start_ms,
             "end_ms": self.end_ms,
             "text_original": self.text_original,
+            "text_english": self.text_english,
             "words": [w.to_dict() for w in self.words],
             "language": self.language,
         }
@@ -187,6 +190,7 @@ class MockTranscriber(Transcriber):
                     start_ms=start_ms,
                     end_ms=end_ms,
                     text_original=text.strip(),
+                    text_english=text.strip(),
                     words=words,
                     language=language
                 )
@@ -269,10 +273,13 @@ class VertexGeminiTranscriber(Transcriber):
                 vocab_clause = f"\nPay special attention to financial products, regulatory terms, and entities: {', '.join(custom_vocabulary[:50])}."
 
             prompt = (
-                "You are an expert audio transcriber and diarizer for banking and investment sales calls.\n"
+                "You are an expert audio transcriber, translator, and diarizer for banking and investment sales calls.\n"
                 "Transcribe this audio recording verbatim with exact 2-speaker diarization and millisecond timestamps.\n"
-                "The conversation may be in English, Hindi, Tamil, or code-mixed Hinglish.\n"
+                "The conversation may be in English, Hindi, Tamil, or code-mixed Hinglish/Tanglish.\n"
                 f"{vocab_clause}\n"
+                "For EACH speaker turn, return BOTH:\n"
+                "- 'text_original': Verbatim transcription in the exact original language/words spoken.\n"
+                "- 'text_english': Accurate, faithful English translation of what was spoken in this turn (if already spoken in English, keep identical to text_original).\n"
                 "Return a valid JSON array of objects representing chronological speaker turns:\n"
                 "[\n"
                 "  {\n"
@@ -281,6 +288,7 @@ class VertexGeminiTranscriber(Transcriber):
                 '    "start_ms": 0,\n'
                 '    "end_ms": 3500,\n'
                 '    "text_original": "verbatim speech in the original language spoken",\n'
+                '    "text_english": "faithful English translation of this specific turn",\n'
                 '    "language": "en"\n'
                 "  }\n"
                 "]\n"
@@ -333,12 +341,13 @@ class VertexGeminiTranscriber(Transcriber):
                 speaker = turn.get("speaker_label", f"Speaker {(idx % 2) + 1}")
                 start_ms = int(turn.get("start_ms", 0))
                 end_ms = int(turn.get("end_ms", start_ms + 1000))
-                text = str(turn.get("text_original", "")).strip()
+                text_orig = str(turn.get("text_original", "")).strip()
+                text_eng = str(turn.get("text_english", "")).strip() or text_orig
                 lang = turn.get("language", "en")
                 detected_languages.add(lang)
 
                 words = []
-                word_list = text.split()
+                word_list = text_orig.split()
                 if word_list:
                     word_duration = max(50, (end_ms - start_ms) // len(word_list))
                     w_start = start_ms
@@ -352,7 +361,8 @@ class VertexGeminiTranscriber(Transcriber):
                         speaker_label=speaker,
                         start_ms=start_ms,
                         end_ms=end_ms,
-                        text_original=text,
+                        text_original=text_orig,
+                        text_english=text_eng,
                         words=words,
                         language=lang,
                     )

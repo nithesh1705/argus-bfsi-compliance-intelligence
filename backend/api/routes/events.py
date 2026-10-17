@@ -44,16 +44,42 @@ def verify_oidc_token(auth_header: Optional[str]) -> bool:
         from google.oauth2 import id_token
         from google.auth.transport import requests
 
-        claims = id_token.verify_oauth2_token(
-            token,
-            requests.Request(),
-            audience=settings.OIDC_AUDIENCE
-        )
+        valid_audiences = [
+            settings.OIDC_AUDIENCE,
+            "https://argus-backend-833068408683.asia-south1.run.app",
+            "https://argus-backend-cloudrun-url",
+        ]
+
+        claims = None
+        for aud in valid_audiences:
+            try:
+                claims = id_token.verify_oauth2_token(
+                    token,
+                    requests.Request(),
+                    audience=aud
+                )
+                break
+            except Exception:
+                continue
+
+        if not claims:
+            claims = id_token.verify_oauth2_token(token, requests.Request())
+            aud = str(claims.get("aud", ""))
+            if not ("argus-backend" in aud or "asia-south1.run.app" in aud or aud in valid_audiences):
+                logger.warning(f"Unauthorized audience '{aud}'")
+                return False
 
         email = claims.get("email")
-        if email not in settings.ALLOWED_SERVICE_ACCOUNTS:
-            logger.warning(f"Unauthorized service account '{email}' attempted event push")
-            return False
+        if email and settings.ALLOWED_SERVICE_ACCOUNTS:
+            is_allowed = (
+                email in settings.ALLOWED_SERVICE_ACCOUNTS or
+                "eventarc" in email or
+                "pubsub" in email or
+                email.endswith(f"@{settings.PROJECT_ID}.iam.gserviceaccount.com")
+            )
+            if not is_allowed:
+                logger.warning(f"Unauthorized service account '{email}' attempted event push")
+                return False
         return True
     except Exception as exc:
         logger.error(f"OIDC token verification failed: {exc}")

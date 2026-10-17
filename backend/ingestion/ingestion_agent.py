@@ -84,9 +84,10 @@ def map_roles_and_translate(
     # llm = get_llm_client()  # gemini-3.5-flash
     llm = get_llm_client(model_id=settings.GEMINI_ROLE_MAPPING_MODEL)  # gemini-2.5-flash
 
-    # Form prompt with context
+    # Form prompt with explicit Segment IDs so translation and role mapping are strictly aligned
     transcript_preview = "\n".join([
-        f"[{s.speaker_label}] {s.text_original}" for s in segments[:10]
+        f"Segment {s.segment_id} [{s.speaker_label}]: {s.text_original} (English: {getattr(s, 'text_english', s.text_original)})"
+        for s in segments
     ])
 
     prompt = f"""You are analyzing a Relationship Manager sales call for regulatory compliance.
@@ -96,7 +97,7 @@ Customer Name: {customer_name}
 
 Task:
 1. Determine which speaker label corresponds to the Relationship Manager ({rm_name}) and which to the Customer ({customer_name}).
-2. Provide verbatim English translations for any segments spoken in Hindi, Tamil, or Hinglish.
+2. Review the conversation. If any non-English segment needs an improved or corrected English translation, provide it with the EXACT matching 'segment_id' integer shown above.
 
 Transcript excerpt:
 {transcript_preview}
@@ -114,7 +115,7 @@ Transcript excerpt:
         if result.confidence < 0.6 or not result.rm_speaker_label:
             raise ValueError(f"Low confidence ({result.confidence}) on speaker role mapping")
 
-        translation_map = {t.segment_id: t.text_english for t in result.translated_segments}
+        translation_map = {int(t.segment_id): t.text_english for t in result.translated_segments if t.segment_id is not None}
         return (
             result.rm_speaker_label,
             result.customer_speaker_label,
@@ -194,8 +195,8 @@ def process_audio_ingestion(
         # Determine role
         role = "RM" if s.speaker_label == rm_label else "CUSTOMER"
 
-        # English translation
-        text_en = trans_map.get(s.segment_id, s.text_original)
+        # English translation: fallback to segment's aligned text_english if trans_map has no override
+        text_en = trans_map.get(s.segment_id) or getattr(s, "text_english", None) or s.text_original
 
         # Apply DLP Redaction on both original and English text
         redacted_orig = redactor.redact_text(s.text_original).redacted_text

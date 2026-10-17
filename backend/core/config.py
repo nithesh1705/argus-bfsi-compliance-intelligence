@@ -75,11 +75,11 @@ class ArgusSettings(BaseSettings):
 
     # Cloud Storage Buckets
     CALLS_BUCKET: str = Field(
-        default_factory=lambda: os.getenv("ARGUS_CALLS_BUCKET", "argus-calls-incoming"),
+        default_factory=lambda: os.getenv("ARGUS_CALLS_BUCKET", "project-c5373081-153f-4b0a-bd8-argus-calls"),
         description="GCS Bucket for incoming and archived calls"
     )
     REGULATIONS_BUCKET: str = Field(
-        default_factory=lambda: os.getenv("ARGUS_REGULATIONS_BUCKET", "argus-regulations"),
+        default_factory=lambda: os.getenv("ARGUS_REGULATIONS_BUCKET", "project-c5373081-153f-4b0a-bd8-argus-regulations"),
         description="GCS Bucket for statutory regulation PDFs and metadata"
     )
 
