@@ -79,7 +79,17 @@ def run_pipeline_for_object(
             )
             existing = cur.fetchone()
             if existing and existing["status"] == "COMPLETED":
-                logger.info(f"[Pipeline] Call object {object_name} (gen {generation}) already processed. Skipping re-run.")
+                logger.info(f"[Pipeline] Call object {object_name} (gen {generation}) already processed. Ensuring archive and cleaning incoming.")
+                audio_incoming_key = f"calls/incoming/{object_name}"
+                archive_key = f"calls/archive/{object_name}"
+                try:
+                    store.copy_object(audio_incoming_key, archive_key)
+                except Exception:
+                    pass
+                try:
+                    store.delete_object(audio_incoming_key)
+                except Exception:
+                    pass
                 return {"status": "ALREADY_PROCESSED", "call_id": existing["id"]}
 
     # Parse and validate filename
