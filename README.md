@@ -22,13 +22,13 @@ An autonomous, explainable compliance intelligence platform for BFSI wealth mana
 
 ## Interface Preview
 
-| Operational Dashboard (Dark Theme) | Operational Dashboard (Light Theme) |
+| Authentication & Waveform Visualizer | Operational Surveillance Dashboard |
 |:---:|:---:|
-| ![Dashboard Dark](docs/glimpse/dark/02-operational-dashboard.png) | ![Dashboard Light](docs/glimpse/light/02-operational-dashboard.png) |
-
-| AI Investigation Assistant (Dark Theme) | Evidence Chain Casework (Dark Theme) |
-|:---:|:---:|
-| ![AI Investigation](docs/glimpse/dark/04-ai-investigation.png) | ![Compliance Cases](docs/glimpse/dark/06-compliance-cases.png) |
+| ![Authentication](docs/glimpse/light/01-login.png) | ![Operational Dashboard](docs/glimpse/light/02-operational-dashboard.png) |
+| **Conversational AI Investigation** | **Evidence Chain & Compliance Cases** |
+| ![AI Investigation](docs/glimpse/light/04-ai-investigation.png) | ![Compliance Cases](docs/glimpse/light/06-compliance-cases.png) |
+| **Surveillance Calls Roster** | **Relationship Manager Risk Analytics (Dark Theme)** |
+| ![Calls Roster](docs/glimpse/light/05-calls.png) | ![RM Analytics](docs/glimpse/dark/07-rm-analytics.png) |
 
 Explore the complete side-by-side dark and light UI walkthrough in the [Screenshot Gallery](docs/GLIMPSE.md).
 
