@@ -15,8 +15,7 @@ An autonomous, explainable compliance intelligence platform for BFSI wealth mana
 
 ## Demo Video
 
-<!-- [![ARGUS demo video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
--->
+[![ARGUS demo video](https://img.youtube.com/vi/86cyyduS8o4/maxresdefault.jpg)](https://www.youtube.com/watch?v=86cyyduS8o4)
 
 ---
 
