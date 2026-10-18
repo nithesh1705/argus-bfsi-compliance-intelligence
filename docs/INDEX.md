@@ -74,6 +74,8 @@ For evaluating data governance, statutory protection, and algorithmic safety:
 
 ## Complete Documentation Catalog
 
+For submission preparation, start with the [Competition Readiness Recommendations](./COMPETITION_READINESS.md) and [Submission Playbook](./SUBMISSION_PLAYBOOK.md). Recommendations remain pending until implemented and verified.
+
 | Document | Primary Focus | Key Source References |
 |---|---|---|
 | [OVERVIEW.md](./OVERVIEW.md) | Business context, BFSI compliance problem, workflow, and Evidence Chain | [`../backend/db/repositories/cases_repo.py`](../backend/db/repositories/cases_repo.py) |
