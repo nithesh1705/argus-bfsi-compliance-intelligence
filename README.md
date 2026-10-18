@@ -95,6 +95,8 @@ For exact library versions and selection rationale, see [Technology Stack](docs/
 
 ## Documentation Map
 
+For proposed submission improvements, see the [Competition Readiness Recommendations](docs/COMPETITION_READINESS.md) and [Submission Playbook](docs/SUBMISSION_PLAYBOOK.md). These documents distinguish observed gaps, proposed changes, and evidence required before stronger claims.
+
 | Document | Description |
 |---|---|
 | [Documentation Hub](docs/INDEX.md) | Central documentation directory and audience-tailored reading paths |
